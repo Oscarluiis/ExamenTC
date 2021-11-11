@@ -1,14 +1,8 @@
-#include <iostream>
-#include "grafo.h"
+#include "menu.h"
 
-class Menu{
-    
-    Grafo control;
+Menu::Menu(){};
 
-    
-
-public:
-void addVertice(){
+void Menu::addVertice(){
     char vertice;
     cout<<"Agregar vertice"<<endl;
     cout<<"Ingrese '*' para salir..."<<endl;
@@ -19,7 +13,8 @@ void addVertice(){
         control.addNodo(vertice);
     }while(true);
 }
-void addArista(){
+
+void Menu::addArista(){
     char aristaOrigen, aristaDestino;
     cout<<"Agregar arista"<<endl;
     cout<<"Ingrese '*' para salir..."<<endl;
@@ -36,22 +31,6 @@ void addArista(){
     }while(true);
 }
 
-void mostrarGrafo(){
+void Menu::mostrarGrafo(){
     control.showGrafo();
 }
-};
-/*
-    Grafo control;  
-    control.addNodo('A');
-    control.addNodo('B');
-    control.addNodo('C');
-    control.addNodo('D');
-
-    control.addArista(Nodo ('A'), Arista ('B'));
-    control.addArista(Nodo ('A'), Arista ('C'));
-    control.addArista(Nodo ('A'), Arista ('D'));
-    control.addArista(Nodo ('B'), Arista ('A'));
-    control.addArista(Nodo ('B'), Arista ('E'));
-    
-    control.showGrafo();
-*/
