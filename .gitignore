@@ -1,0 +1,10 @@
+
+.DS_Store
+
+*.out
+
+Ejercicio1/grafo.h.gch
+
+*.gch
+
+*.json
