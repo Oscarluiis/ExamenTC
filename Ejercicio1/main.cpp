@@ -1,9 +1,11 @@
-#include "menu.h"
+#include "menu.cpp"
 using namespace std;
 
 int main(){
     
     Menu control;
-    control.mostrarMenu();
+    control.addVertice();
+    control.addArista();
+    control.mostrarGrafo();
     return 0;
 }
