@@ -38,6 +38,7 @@ void addArista(){
 
 void mostrarGrafo(){
     control.showGrafo();
+<<<<<<< HEAD
 }
 };
 /*
@@ -55,3 +56,6 @@ void mostrarGrafo(){
     
     control.showGrafo();
 */
+=======
+}
+>>>>>>> parent of 488e74c... Menu mejor.
