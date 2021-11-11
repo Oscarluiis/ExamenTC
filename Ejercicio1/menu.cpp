@@ -1,14 +1,8 @@
-#include <iostream>
-#include "grafo.h"
+#include "menu.h"
 
-class Menu{
-    
-    Grafo control;
+Menu::Menu(){};
 
-    
-
-public:
-void addVertice(){
+void Menu::addVertice(){
     char vertice;
     cout<<"Agregar vertice"<<endl;
     cout<<"Ingrese '*' para salir..."<<endl;
@@ -19,7 +13,8 @@ void addVertice(){
         control.addNodo(vertice);
     }while(true);
 }
-void addArista(){
+
+void Menu::addArista(){
     char aristaOrigen, aristaDestino;
     cout<<"Agregar arista"<<endl;
     cout<<"Ingrese '*' para salir..."<<endl;
@@ -36,22 +31,44 @@ void addArista(){
     }while(true);
 }
 
-void mostrarGrafo(){
+void Menu::mostrarGrafo(){
     control.showGrafo();
 }
-};
-/*
-    Grafo control;  
-    control.addNodo('A');
-    control.addNodo('B');
-    control.addNodo('C');
-    control.addNodo('D');
 
-    control.addArista(Nodo ('A'), Arista ('B'));
-    control.addArista(Nodo ('A'), Arista ('C'));
-    control.addArista(Nodo ('A'), Arista ('D'));
-    control.addArista(Nodo ('B'), Arista ('A'));
-    control.addArista(Nodo ('B'), Arista ('E'));
-    
-    control.showGrafo();
-*/
+void Menu::mostrarMenu(){
+    int opcionMenu;
+    do{
+        cout<<"\t .:M e n u:."<<endl;
+        cout<<"1. Crear vertices"<<endl;
+        cout<<"2. Conectar aristas"<<endl;
+        cout<<"3. Mostrar grafo"<<endl;
+        cout<<"4. Salir"<<endl;
+        cout<<"Seleccione una opcion: ";
+        cin>>opcionMenu;
+
+        switch (opcionMenu)
+        {
+        case 1:
+            addVertice();
+            system("clear");
+            break;
+        case 2:
+            addArista();
+            system("clear");
+            break;
+        case 3:
+            mostrarGrafo();
+            cout<<"Enter para continuar..."<<endl;
+            cin.ignore().get();
+            system("clear");
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout<<"Ingrese una opcion valida, enter para continuar..."<<endl;
+            cin.ignore().get();
+            system("clear");
+            break;
+        }
+    }while(opcionMenu!=4);
+}
