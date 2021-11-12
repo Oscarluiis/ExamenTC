@@ -1,0 +1,6 @@
+		Piedra Papel Tijera Lagarto Spock
+Piedra    0      0    1       1       0
+Papel     1      0    0       0       1
+Tijera    0      1    0       1       0
+Lagarto   0      1    0       0       1
+Spock     1      0    1       0       0
